@@ -1,0 +1,65 @@
+﻿@model IEnumerable<RSM.Models.order>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.order_name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.order_createddate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.order_status)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.order_description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.order_quantity)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.order_prioritystatus)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.order_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.order_createddate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.order_status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.order_description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.order_quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.order_prioritystatus)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.order_id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.order_id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.order_id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

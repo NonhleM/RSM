@@ -1,0 +1,53 @@
+﻿@model IEnumerable<RSM.Models.repair>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.repair_description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.repair_prioritystatus)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.repair_completionstatus)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.repair_createddate)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.repair_description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.repair_prioritystatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.repair_completionstatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.repair_createddate)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.repair_ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.repair_ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.repair_ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

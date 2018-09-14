@@ -1,0 +1,42 @@
+﻿@model RSM.Models.box
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>box</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.box_name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.box_name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.box_row)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.box_row)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.box_column)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.box_column)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.box_createddate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.box_createddate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.box_id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

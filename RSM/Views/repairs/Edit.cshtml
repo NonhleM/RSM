@@ -1,0 +1,49 @@
+﻿@model RSM.Models.repair
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>repair</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="repair_ID" />
+            <div class="form-group">
+                <label asp-for="repair_description" class="control-label"></label>
+                <input asp-for="repair_description" class="form-control" />
+                <span asp-validation-for="repair_description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="repair_prioritystatus" class="control-label"></label>
+                <input asp-for="repair_prioritystatus" class="form-control" />
+                <span asp-validation-for="repair_prioritystatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="repair_completionstatus" class="control-label"></label>
+                <input asp-for="repair_completionstatus" class="form-control" />
+                <span asp-validation-for="repair_completionstatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="repair_createddate" class="control-label"></label>
+                <input asp-for="repair_createddate" class="form-control" />
+                <span asp-validation-for="repair_createddate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

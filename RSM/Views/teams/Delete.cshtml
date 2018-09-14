@@ -1,0 +1,33 @@
+﻿@model RSM.Models.team
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>team</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.team_name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.team_name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.team_datecreated)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.team_datecreated)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="team_ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

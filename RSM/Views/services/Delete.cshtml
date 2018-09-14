@@ -1,0 +1,51 @@
+﻿@model RSM.Models.service
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>service</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.service_name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.service_name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.service_description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.service_description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.service_datetime)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.service_datetime)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.service_venue)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.service_venue)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.service_createddate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.service_createddate)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="service_id" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

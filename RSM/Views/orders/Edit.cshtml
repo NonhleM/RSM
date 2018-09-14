@@ -1,0 +1,59 @@
+﻿@model RSM.Models.order
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>order</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="order_id" />
+            <div class="form-group">
+                <label asp-for="order_name" class="control-label"></label>
+                <input asp-for="order_name" class="form-control" />
+                <span asp-validation-for="order_name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="order_createddate" class="control-label"></label>
+                <input asp-for="order_createddate" class="form-control" />
+                <span asp-validation-for="order_createddate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="order_status" class="control-label"></label>
+                <input asp-for="order_status" class="form-control" />
+                <span asp-validation-for="order_status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="order_description" class="control-label"></label>
+                <input asp-for="order_description" class="form-control" />
+                <span asp-validation-for="order_description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="order_quantity" class="control-label"></label>
+                <input asp-for="order_quantity" class="form-control" />
+                <span asp-validation-for="order_quantity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="order_prioritystatus" class="control-label"></label>
+                <input asp-for="order_prioritystatus" class="form-control" />
+                <span asp-validation-for="order_prioritystatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,59 @@
+﻿@model IEnumerable<RSM.Models.service>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.service_name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.service_description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.service_datetime)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.service_venue)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.service_createddate)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.service_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.service_description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.service_datetime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.service_venue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.service_createddate)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.service_id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.service_id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.service_id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

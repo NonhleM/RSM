@@ -1,0 +1,65 @@
+﻿@model IEnumerable<RSM.Models.task>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.task_name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.task_instructions)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.task_createdate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.task_prioritystatus)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.task_completionstatus)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.task_duedate)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.task_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.task_instructions)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.task_createdate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.task_prioritystatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.task_completionstatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.task_duedate)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.task_ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.task_ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.task_ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

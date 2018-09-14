@@ -1,0 +1,83 @@
+﻿@model IEnumerable<RSM.Models.resource>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.resource_type)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.resource_name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.resource_description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.resource_datebought)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.resource_datecreated)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.resource_datelastmodified)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.resource_conditionstatus)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.resource_availabilitystatus)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.resource_bookedfordate)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.resource_type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.resource_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.resource_description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.resource_datebought)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.resource_datecreated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.resource_datelastmodified)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.resource_conditionstatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.resource_availabilitystatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.resource_bookedfordate)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.resource_ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.resource_ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.resource_ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

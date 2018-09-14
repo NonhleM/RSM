@@ -1,0 +1,54 @@
+﻿@model RSM.Models.task
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>task</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.task_name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.task_name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.task_instructions)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.task_instructions)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.task_createdate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.task_createdate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.task_prioritystatus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.task_prioritystatus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.task_completionstatus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.task_completionstatus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.task_duedate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.task_duedate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.task_ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

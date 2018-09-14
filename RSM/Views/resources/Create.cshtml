@@ -1,0 +1,73 @@
+﻿@model RSM.Models.resource
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h2>Create</h2>
+
+<h4>resource</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="resource_type" class="control-label"></label>
+                <input asp-for="resource_type" class="form-control" />
+                <span asp-validation-for="resource_type" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="resource_name" class="control-label"></label>
+                <input asp-for="resource_name" class="form-control" />
+                <span asp-validation-for="resource_name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="resource_description" class="control-label"></label>
+                <input asp-for="resource_description" class="form-control" />
+                <span asp-validation-for="resource_description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="resource_datebought" class="control-label"></label>
+                <input asp-for="resource_datebought" class="form-control" />
+                <span asp-validation-for="resource_datebought" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="resource_datecreated" class="control-label"></label>
+                <input asp-for="resource_datecreated" class="form-control" />
+                <span asp-validation-for="resource_datecreated" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="resource_datelastmodified" class="control-label"></label>
+                <input asp-for="resource_datelastmodified" class="form-control" />
+                <span asp-validation-for="resource_datelastmodified" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="resource_conditionstatus" class="control-label"></label>
+                <input asp-for="resource_conditionstatus" class="form-control" />
+                <span asp-validation-for="resource_conditionstatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="resource_availabilitystatus" class="control-label"></label>
+                <input asp-for="resource_availabilitystatus" class="form-control" />
+                <span asp-validation-for="resource_availabilitystatus" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="resource_bookedfordate" class="control-label"></label>
+                <input asp-for="resource_bookedfordate" class="form-control" />
+                <span asp-validation-for="resource_bookedfordate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

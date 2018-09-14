@@ -1,0 +1,42 @@
+﻿@model RSM.Models.repair
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>repair</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.repair_description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.repair_description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.repair_prioritystatus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.repair_prioritystatus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.repair_completionstatus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.repair_completionstatus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.repair_createddate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.repair_createddate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.repair_ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

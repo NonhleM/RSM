@@ -1,0 +1,41 @@
+﻿@model IEnumerable<RSM.Models.team>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.team_name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.team_datecreated)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.team_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.team_datecreated)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.team_ID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.team_ID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.team_ID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

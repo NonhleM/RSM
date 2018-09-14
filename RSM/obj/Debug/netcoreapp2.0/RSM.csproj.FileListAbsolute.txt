@@ -1,0 +1,11 @@
+C:\Users\Oratile Modise\Documents\School\YOS3\IS Project Course\ANCHOR CHURCH PROJECT\RSM\RSM\bin\Debug\netcoreapp2.0\RSM.deps.json
+C:\Users\Oratile Modise\Documents\School\YOS3\IS Project Course\ANCHOR CHURCH PROJECT\RSM\RSM\bin\Debug\netcoreapp2.0\RSM.runtimeconfig.json
+C:\Users\Oratile Modise\Documents\School\YOS3\IS Project Course\ANCHOR CHURCH PROJECT\RSM\RSM\bin\Debug\netcoreapp2.0\RSM.runtimeconfig.dev.json
+C:\Users\Oratile Modise\Documents\School\YOS3\IS Project Course\ANCHOR CHURCH PROJECT\RSM\RSM\bin\Debug\netcoreapp2.0\RSM.dll
+C:\Users\Oratile Modise\Documents\School\YOS3\IS Project Course\ANCHOR CHURCH PROJECT\RSM\RSM\obj\Debug\netcoreapp2.0\RSM.csprojResolveAssemblyReference.cache
+C:\Users\Oratile Modise\Documents\School\YOS3\IS Project Course\ANCHOR CHURCH PROJECT\RSM\RSM\obj\Debug\netcoreapp2.0\RSM.csproj.CoreCompileInputs.cache
+C:\Users\Oratile Modise\Documents\School\YOS3\IS Project Course\ANCHOR CHURCH PROJECT\RSM\RSM\obj\Debug\netcoreapp2.0\RSM.AssemblyInfoInputs.cache
+C:\Users\Oratile Modise\Documents\School\YOS3\IS Project Course\ANCHOR CHURCH PROJECT\RSM\RSM\obj\Debug\netcoreapp2.0\RSM.AssemblyInfo.cs
+C:\Users\Oratile Modise\Documents\School\YOS3\IS Project Course\ANCHOR CHURCH PROJECT\RSM\RSM\bin\Debug\netcoreapp2.0\RSM.pdb
+C:\Users\Oratile Modise\Documents\School\YOS3\IS Project Course\ANCHOR CHURCH PROJECT\RSM\RSM\obj\Debug\netcoreapp2.0\RSM.dll
+C:\Users\Oratile Modise\Documents\School\YOS3\IS Project Course\ANCHOR CHURCH PROJECT\RSM\RSM\obj\Debug\netcoreapp2.0\RSM.pdb

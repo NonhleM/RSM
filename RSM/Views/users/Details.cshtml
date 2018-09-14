@@ -1,0 +1,60 @@
+﻿@model RSM.Models.user
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>user</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.user_type)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.user_type)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.user_firstname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.user_firstname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.user_lastname)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.user_lastname)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.user_emailaddress)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.user_emailaddress)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.user_password)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.user_password)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.user_datecreated)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.user_datecreated)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.user_status)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.user_status)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.user_ID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

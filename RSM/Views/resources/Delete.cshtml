@@ -1,0 +1,75 @@
+﻿@model RSM.Models.resource
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>resource</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.resource_type)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.resource_type)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.resource_name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.resource_name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.resource_description)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.resource_description)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.resource_datebought)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.resource_datebought)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.resource_datecreated)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.resource_datecreated)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.resource_datelastmodified)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.resource_datelastmodified)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.resource_conditionstatus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.resource_conditionstatus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.resource_availabilitystatus)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.resource_availabilitystatus)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.resource_bookedfordate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.resource_bookedfordate)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="resource_ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
